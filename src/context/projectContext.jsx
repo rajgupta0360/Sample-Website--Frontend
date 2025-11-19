@@ -12,7 +12,7 @@ import { useContext, createContext, useState, useEffect } from "react";
                 try {
                     console.log("fetching projects this is a file in context");
                     const res = await axios.get("https://sample-website-backend.vercel.app/api/projects");
-
+                    console.log("result after fetching", res)
                     if (res.data && Array.isArray(res.data.projects)) {
                         setProjects(res.data.projects); // Set state with persistent data
                     }
