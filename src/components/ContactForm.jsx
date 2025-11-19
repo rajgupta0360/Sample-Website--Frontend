@@ -14,7 +14,7 @@ export default function ContactForm() {
             city: e.target.city.value,
         };
         try {
-            const res = await axios.post("http://localhost:2173/api/contact-form", formData);
+            const res = await axios.post("https://sample-website-backend.vercel.app/api/contact-form", formData);
             console.log(res);
             if (res.data && res.status === 201) {
                 const data = res.data;

@@ -9,7 +9,7 @@ export const FormProvider = ({ children }) => {
     useEffect(() => {
         const fetchForms = async () => {
             try {
-                const res = await axios.get("http://localhost:2173/api/contact-form");
+                const res = await axios.get("https://sample-website-backend.vercel.app/api/contact-form");
 
                 if (res.data && Array.isArray(res.data.doc)) {
                     setFormData(res.data.doc); // Set state with persistent data

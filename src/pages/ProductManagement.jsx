@@ -21,14 +21,10 @@ const ProductManagement = () => {
         if (file) {
             data.append('image', file);
         }
-
-        console.log(data);
         try {
-            const res = await axios.post("http://localhost:2173/api/projects",data);
-            console.log("Project Management", res.data)
+            const res = await axios.post("https://sample-website-backend.vercel.app/api/projects",data);
             if (res.data && res.status === 201) {
                 addProjects(res.data.project);
-                console.log(projects);
                 toast.success(res.data.message);
             }
         } catch (error) {

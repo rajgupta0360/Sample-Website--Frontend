@@ -9,11 +9,9 @@ export const SubscribedProvider = ({ children }) => {
     useEffect(() => {
         const fetchSubscribed = async () => {
             try {
-                const res = await axios.get("http://localhost:2173/api/subscribed-email");
+                const res = await axios.get("https://sample-website-backend.vercel.app/api/subscribed-email");
                 if (res.data.emails) { 
-                    console.log("hiii")
                     setSubscribed(res.data.emails);
-                    console.log(subscribed);
                 }
             } catch (error) {
                 console.error("Error fetching subscribed emails:", error);
