@@ -3,6 +3,7 @@ import React from 'react'
 
 const SubscribedEmail = () => {
     const { subscribed } = getSubscribedData();
+    const arr = [{email: "aksjfladsjfjsds"}]
     return (
         <section className='flex justify-center items-center'>
             <div

@@ -10,10 +10,13 @@ export default function Newsletter() {
 
         const email = e.target.email.value;
         try {
-            const res = await axios.post("https://sample-website-backend.vercel.app/api/subscribed-email", { email });
+            const res = await axios.post("http://localhost:2173/api/subscribed-email", { email });
             alert("Subscribed!");
+            console.log(res)
             if (res.data && res.status === 201) {
                 addSubscriber(res.data.newSubscribedEmail);
+                console.log(res.data.newSubscribedEmail);
+                console.log(subscribed);
             }
         }
         catch (error) {

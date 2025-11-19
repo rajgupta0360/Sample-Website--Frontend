@@ -20,9 +20,11 @@ const ClientManagement = () => {
         }
 
         try {
-            const res = await axios.post("https://sample-website-backend.vercel.app/api/clients", formData);
+            const res = await axios.post("http://localhost:2173/api/clients", formData);
             if (res.data) {
+                console.log(res.data)
                 addClient(res.data.client);
+                console.log(clients)
                 toast.success(res.data.message);
             }
         } catch (error) {

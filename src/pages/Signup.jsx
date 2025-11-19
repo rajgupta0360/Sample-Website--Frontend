@@ -29,9 +29,10 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(formData);
         try {
             setLoading(true);
-            const res = await axios.post(`https://sample-website-backend.vercel.app/api/admin/signup`, formData);
+            const res = await axios.post(`http://localhost:2173/api/admin/signup`, formData);
             console.log('SIGNUP PAGE',res);
             if (res.data.admin && res.status === 201) {
                 toast.success(res.data.message);

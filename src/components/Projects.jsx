@@ -3,7 +3,8 @@ import { getProjectsData } from "@/context/projectContext";
 
 export default function Projects() {
     const { projects, loading } = getProjectsData();
-    const BASE_IMAGE_URL = "https://sample-website-backend.vercel.app/";
+    const BASE_IMAGE_URL = "http://localhost:2173/";
+    console.log(projects);
     if (loading) {
         return <section className="py-16 text-center">Loading Projects...</section>;
     }

@@ -9,7 +9,7 @@ export const ClientProvider = ({ children }) => {
     useEffect(() => {
         const fetchClients = async () => {
             try {
-                const res = await axios.get("https://sample-website-backend.vercel.app/api/clients");
+                const res = await axios.get("http://localhost:2173/api/clients");
 
                 if (res.data && Array.isArray(res.data.clients)) {
                     setClients(res.data.clients)

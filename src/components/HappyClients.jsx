@@ -2,7 +2,7 @@ import { getClient } from "@/context/clientContext";
 
 export default function HappyClients() {
     const { clients } = getClient();
-    const BASE_IMAGE_URL = "https://sample-website-backend.vercel.app/";
+    const BASE_IMAGE_URL = "http://localhost:2173/";
     
     return (
         <section className="py-16">

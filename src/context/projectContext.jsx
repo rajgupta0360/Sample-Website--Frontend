@@ -10,7 +10,7 @@ import { useContext, createContext, useState, useEffect } from "react";
         useEffect(() => {
             const fetchProjects = async () => {
                 try {
-                    const res = await axios.get("https://sample-website-backend.vercel.app/api/projects");
+                    const res = await axios.get("http://localhost:2173/api/projects");
 
                     if (res.data && Array.isArray(res.data.projects)) {
                         setProjects(res.data.projects); // Set state with persistent data
