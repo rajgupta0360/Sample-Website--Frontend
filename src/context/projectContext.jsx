@@ -10,6 +10,7 @@ import { useContext, createContext, useState, useEffect } from "react";
         useEffect(() => {
             const fetchProjects = async () => {
                 try {
+                    console.log("fetching projects this is a file in context");
                     const res = await axios.get("https://sample-website-backend.vercel.app/api/projects");
 
                     if (res.data && Array.isArray(res.data.projects)) {
